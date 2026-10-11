@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Vivid ambient light source simulation behind the card -->
     <div class="ambient-glow"></div>
 
     <div class="card">
+        <!-- 1. Analyzer Section -->
         <div class="card-header">
             <h2>Password Core</h2>
             <p class="subtitle">Security Metrics Engine</p>
@@ -25,6 +25,11 @@
             <div id="strength-bar"></div>
         </div>
         <p id="feedback-text">Awaiting input entry...</p>
+        
+        <!-- Crack Time Feature -->
+        <div class="crack-time-display">
+            Crack Time Estimate: <span id="crack-time-value">0 seconds</span>
+        </div>
 
         <ul class="requirements">
             <li id="req-length"><span class="indicator"></span>Minimum 8 characters</li>
@@ -32,6 +37,17 @@
             <li id="req-number"><span class="indicator"></span>At least 1 number</li>
             <li id="req-special"><span class="indicator"></span>At least 1 special character</li>
         </ul>
+
+        <!-- 2. Generator Section (New) -->
+        <div class="generator-section">
+            <h3>Secure Generator</h3>
+            <div class="slider-container">
+                <label>Length: <span id="length-val">16</span></label>
+                <input type="range" id="gen-length" min="6" max="32" value="16">
+            </div>
+            <button id="generate-btn" type="button">Generate & Copy</button>
+            <p id="gen-success-msg"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
