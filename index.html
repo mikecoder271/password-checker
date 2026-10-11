@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Password Checker</title>
+    <title>Crypto Shield Analyzer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Vivid ambient light source simulation behind the card -->
+    <div class="ambient-glow"></div>
+
     <div class="card">
-        <h2>Password Strength Analyzer</h2>
+        <div class="card-header">
+            <h2>Password Core</h2>
+            <p class="subtitle">Security Metrics Engine</p>
+        </div>
+
         <div class="input-container">
-            <input type="password" id="password" placeholder="Enter password...">
+            <input type="password" id="password" placeholder="System credential...">
             <button id="toggle-btn" type="button">Show</button>
         </div>
         
         <div class="meter-container">
             <div id="strength-bar"></div>
         </div>
-        <p id="feedback-text">Type a password to check strength...</p>
+        <p id="feedback-text">Awaiting input entry...</p>
 
         <ul class="requirements">
-            <li id="req-length">❌ Minimum 8 characters</li>
-            <li id="req-upper">❌ At least 1 uppercase letter</li>
-            <li id="req-number">❌ At least 1 number</li>
-            <li id="req-special">❌ At least 1 special character</li>
+            <li id="req-length"><span class="indicator"></span>Minimum 8 characters</li>
+            <li id="req-upper"><span class="indicator"></span>At least 1 uppercase letter</li>
+            <li id="req-number"><span class="indicator"></span>At least 1 number</li>
+            <li id="req-special"><span class="indicator"></span>At least 1 special character</li>
         </ul>
     </div>
     <script src="script.js"></script>
